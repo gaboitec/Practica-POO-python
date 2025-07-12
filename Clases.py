@@ -18,15 +18,21 @@ class ListaEstudiantes:
     def agregar_estudiante(self, estudiante: Estudiante):
         self.lista.append(estudiante)
 
-    def get_lista(self):
-        for estudiante in self.lista:
+    def mostrar_lista(self):
+        try:
+            for estudiante in self.lista:
             print(estudiante.get_estudiante())
+        except Error:
+            print("Ningun estudiante agregado")
 
     def get_promedios(self):
         promedios = 0
-        for estudiante in self.lista:
+        try:
+            for estudiante in self.lista:
             promedios += estudiante.get_nota()
-
+        except error:
+            print("Ningun estudiante agregado")
+            
         return promedios / len(self.lista)
 
 listaEstudiantes = ListaEstudiantes()
