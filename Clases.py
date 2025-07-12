@@ -28,3 +28,5 @@ class ListaEstudiantes:
             promedios += estudiante.get_nota()
 
         return promedios / len(self.lista)
+
+listaEstudiantes = ListaEstudiantes()

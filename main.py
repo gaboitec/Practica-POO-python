@@ -13,3 +13,11 @@ while True:
 
     if opcion == "1":
         nuevo_estudiante = Estudiante(input("Nombre del estudiante: "), input("Carné del estudiante: "), input("Carrera del estudiante: "), input("Nota final del estudiante: "))
+        listaEstudiantes.agregar_estudiante(nuevo_estudiante)
+    elif opcion == "2":
+        print("\nESTUDIANTES REGISTRADOS:")
+        listaEstudiantes.get_lista()
+    elif opcion == "3":
+        print("\nBUSCAR ESTUDIANTE:")
+        carneIn = input("Ingrese el carné a buscar: ")
+
