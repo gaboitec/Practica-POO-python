@@ -10,6 +10,9 @@ class Estudiante:
 
     def get_nota(self):
         return self.__nota_final
+        
+    def get_carne(self):
+        return self.__carne
 
 class ListaEstudiantes:
     def __init__(self):
@@ -27,10 +30,9 @@ class ListaEstudiantes:
 
     def buscar(self, carne)
         for estudiante in self.lista:
-            if carne == estudiante.get_nota():
+            if carne == estudiante.get_carne():
                 return estudiante
             
-
     def get_promedios(self):
         promedios = 0
         try:
