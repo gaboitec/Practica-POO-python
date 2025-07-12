@@ -22,8 +22,12 @@ while True:
         print("\nBUSCAR ESTUDIANTE:")
         carneIn = input("Ingrese el carné a buscar: ")
         
-        estudiante_encontrado = listaEstudiantes.buscar(carneIn)
-        estudiante_encontrado.get_estudiante()
+        try:
+            estudiante_encontrado = listaEstudiantes.buscar(carneIn)
+            print("Estudiante:")
+            estudiante_encontrado.get_estudiante()
+        except error:
+            print("Estudiante no encontrado")
     elif opcion == "4":
         print("\nPROMEDIO DE TODAS LAS NOTAS:")
         print(listaEstudiantes.get_promedio)
